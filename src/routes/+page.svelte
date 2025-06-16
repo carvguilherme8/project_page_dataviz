@@ -1,3 +1,7 @@
+<script>
+import { base } from '$app/paths';
+</script>
+
 <svelte:head>
     <title>Página do Projeto</title>
 </svelte:head>
@@ -35,23 +39,23 @@
         <div class="resumo-item">
             <h3><strong>Resultados ao longo do tempo</strong></h3>
             <p>Nessa visualização destacamos a performance dos medalhistas de ouro em diversas modalidades do atletismo através das diferentes edições dos Jogos Olímpicos. Observe como as marcas vencedoras evoluíram, identifique atletas que dominaram suas provas e perceba o impacto de diferentes eras no auge do desempenho esportivo. Utilize os filtros disponíveis para refinar sua busca e focar em eventos específicos ou faixas de resultados que mais lhe interessam.</p>
-            <img src="/page1.png" alt="Gráfico de desempenho dos medalhistas ao longo do tempo"/>
+            <img src={`${base}/page1.png`} alt="Gráfico de desempenho dos medalhistas ao longo do tempo"/>
         </div>
         <div class="resumo-item">
             <h3><strong>Rede de Competição de Atletas</strong></h3>
             <p>Esta visualização revela a rede de rivalidades e encontros entre atletas olímpicos ao longo da história. Cada nó representa um competidor, posicionado de acordo com sua frequência de confrontos com o atleta central, permitindo identificar adversários recorrentes, duelos icônicos e até padrões de dominância em determinadas modalidades.</p>
-            <img src="/page2.png" alt="Grafo de rede de competição entre atletas"/>
+            <img src={`${base}/page2.png`} alt="Grafo de rede de competição entre atletas"/>
         </div>
         <div class="resumo-item">
             <h3><strong>Histórico das edições</strong></h3>
             <p>Na terceira página apresentamos uma animação com a evolução do ranking dos 10 países com mais medalhas conquistadas em todas as edições dos Jogos Olímpicos. Descubra as ascensões e quedas das maiores potências esportivas do mundo e acompanhe as mudanças no domínio olímpico ao longo dos anos. Além disso, confira os cards ao lado do ranking para informações detalhadas sobre cada edição, incluindo curiosidades e destaques marcantes.</p>
-            <img src="/page3.png" alt="Animação do ranking de medalhas por país"/>
+            <img src={`${base}/page3.png`} alt="Animação do ranking de medalhas por país"/>
         </div>
     </div>
 
     <div class="video-container">
-        <video width="100%" controls poster="/thumb_video.png">
-            <source src="/video_apresentação.mp4" type="video/mp4">
+        <video width="100%" controls poster={`${base}/thumb_video.png`}>
+            <source src={`${base}/video_apresentação.mp4`} type="video/mp4">
             Seu navegador não suporta a tag de vídeo.
         </video>
     </div>
