@@ -27,10 +27,8 @@ import { base } from '$app/paths';
         
         <p>
             Link para o Artigo:
-            <a href="https://filiacao.pt.org.br"
-                target="_blank"
-                rel="noopener">
-                link do artigo
+            <a href={`${base}/FinalPaper.pdf`} target="_blank" rel="noopener noreferrer">
+                Plataforma de Analise dos Resultados Olímpicos
             </a>
         </p>   
     </div>
@@ -53,21 +51,26 @@ import { base } from '$app/paths';
         </div>
     </div>
 
+    <div class="videos">
     <div class="video-container">
-        <video width="100%" controls poster={`${base}/thumb_video.png`}>
-            <source src={`${base}/video_apresentação.mp4`} type="video/mp4">
+        <video width="100%" controls poster={`${base}/thumb_trailer.png`}>
+            <source src={`${base}/video_trailer.mp4`} type="video/mp4">
             Seu navegador não suporta a tag de vídeo.
         </video>
     </div>
-
-    
-    <div class="instrucoes">
-        <h1>Instruções de Execução</h1>
-        Lorem ipsum dolor sit
+    <div class="video-container">
+        <video width="100%" controls poster={`${base}/thumb_apresentacao.png`}>
+            <source src={`${base}/video_apresentacao.mp4`} type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
     </div>
+    </div>
+
+
 </div>
 
 <style>
+/* ... (seus estilos .page, .title, .resumo, etc. permanecem os mesmos) ... */
 .page h1, h3{
     color: #0076bf;
 }
@@ -94,6 +97,7 @@ import { base } from '$app/paths';
     font-size: 1rem;
     text-align: center;
 }
+
 .resumo {
     display: flex;
     gap: 20px;
@@ -121,10 +125,29 @@ import { base } from '$app/paths';
     border-radius: 0px;
 }
 
-.video-container {
+.videos {
+    display: flex;
+    gap: 20px; 
     margin: 2rem 0;
+}
+
+
+.video-container {
+    flex: 1; 
+    position: relative;
+    width: 100%;
+    height: 365px;
+    background-color: black; 
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 </style>
